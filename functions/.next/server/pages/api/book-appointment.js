@@ -1,0 +1,9 @@
+"use strict";(()=>{var e={};e.id=562,e.ids=[562],e.modules={145:e=>{e.exports=require("next/dist/compiled/next-server/pages-api.runtime.prod.js")},6249:(e,t)=>{Object.defineProperty(t,"l",{enumerable:!0,get:function(){return function e(t,r){return r in t?t[r]:"then"in t&&"function"==typeof t.then?t.then(t=>e(t,r)):"function"==typeof t&&"default"===r?t:void 0}}})},7683:(e,t,r)=>{r.r(t),r.d(t,{config:()=>d,default:()=>m,routeModule:()=>c});var n={};r.r(n),r.d(n,{default:()=>l});var o=r(1802),i=r(7153),a=r(6249);let s=require("nodemailer");var u=r.n(s);async function l(e,t){if("POST"!==e.method)return t.status(405).json({message:"Method Not Allowed"});let{fullName:r,age:n,mobileNumber:o,service:i,description:a}=e.body;try{let e=u().createTransport({service:"gmail",auth:{user:"jaishree3025@gmail.com",pass:"nzutzxcmnbkhfmrh"},tls:{rejectUnauthorized:!1}});return await e.sendMail({from:"drmovementrx@gmail.com",to:"drmovementrx@gmail.com",subject:"New Appointment Booking",text:`
+📅 New Appointment Request
+
+👤 Name: ${r}
+🎂 Age: ${n}
+📱 Mobile: ${o}
+🛠️ Service: ${i}
+📝 Problem Description: ${a}
+      `}),t.status(200).json({message:"Email sent successfully!"})}catch(e){return console.error("Email error:",e),t.status(500).json({message:"Failed to send email",error:e.message})}}let m=(0,a.l)(n,"default"),d=(0,a.l)(n,"config"),c=new o.PagesAPIRouteModule({definition:{kind:i.x.PAGES_API,page:"/api/book-appointment",pathname:"/api/book-appointment",bundlePath:"",filename:""},userland:n})},7153:(e,t)=>{var r;Object.defineProperty(t,"x",{enumerable:!0,get:function(){return r}}),function(e){e.PAGES="PAGES",e.PAGES_API="PAGES_API",e.APP_PAGE="APP_PAGE",e.APP_ROUTE="APP_ROUTE"}(r||(r={}))},1802:(e,t,r)=>{e.exports=r(145)}};var t=require("../../webpack-api-runtime.js");t.C(e);var r=t(t.s=7683);module.exports=r})();
