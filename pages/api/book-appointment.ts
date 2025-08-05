@@ -12,17 +12,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'jaishree3025@gmail.com',         // ✅ Your Gmail
-        pass: 'nzutzxcmnbkhfmrh',               // ✅ App Password
+        user: process.env.EMAIL_USER || 'jaishree3025@gmail.com',
+        pass: process.env.EMAIL_PASS || 'nzutzxcmnbkhfmrh',
       },
       tls: {
-        rejectUnauthorized: false               // ✅ Fixes self-signed certificate error
+        rejectUnauthorized: false
       }
     })
 
     await transporter.sendMail({
-      from: 'drmovementrx@gmail.com',
-      to: 'drmovementrx@gmail.com',
+      from: process.env.EMAIL_FROM || 'drmovementrx@gmail.com',
+      to: process.env.EMAIL_TO || 'drmovementrx@gmail.com',
       subject: 'New Appointment Booking',
       text: `
 📅 New Appointment Request

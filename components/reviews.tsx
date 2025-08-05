@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { db } from "../lib/firebase"; // adjust path if needed
+import { db } from "@/lib/firebase"; // Fixed import path
 import {
   collection,
   query,

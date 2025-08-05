@@ -17,7 +17,7 @@ import {
 import { Star, Send } from "lucide-react";
 
 // ✅ Firebase imports
-import { db } from "../lib/firebase";
+import { db } from "@/lib/firebase";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 export default function ReviewForm() {
