@@ -31,7 +31,7 @@ export default function Contact() {
             <CardContent className="p-6 text-center">
               <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Location</h3>
-              <p className="text-gray-600">Home Service Available</p>
+              <p className="text-gray-600">Bommanahalli</p>
             </CardContent>
           </Card>
 
