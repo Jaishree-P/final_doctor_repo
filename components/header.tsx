@@ -56,7 +56,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
   <Image
-    src="functions\nextApp\public\dap-icon.jpeg" // Correct path from public folder
+    src="/dap-icon.jpeg" // Fixed path - logo is in public folder
     alt="Doctor Active Plus Logo"
     width={32}
     height={32}

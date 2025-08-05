@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Doctor Active Plus - Revolutionary Physiotherapy Experience",
   icons:{
-    icon:"/D-Active-Plus-Logo.jpeg",
+    icon:"/dap-icon.jpeg",
   },
   description:
     "Transform your health with cutting-edge physiotherapy treatments. Expert care, innovative techniques, and premium home service for optimal recovery and wellness.",

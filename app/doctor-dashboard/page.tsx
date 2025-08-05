@@ -257,7 +257,7 @@ export default function DoctorDashboard() {
       <div className="relative z-10 flex flex-col gap-6 flex-grow">
         {/* Header */}
         <div className="flex items-center gap-4 pb-3 border-b border-gray-300">
-          <img src="functions\nextApp\public\dap-icon.jpeg" alt="Clinic Logo" className="w-16 h-16 object-contain" />
+          <img src="/dap-icon.jpeg" alt="Clinic Logo" className="w-16 h-16 object-contain" />
           <div>
             <h1 className="text-2xl font-bold text-gray-800">Doctor Active Plus</h1>
             <p className="text-gray-600 text-sm">Advance Spine | Joint & Laser Center</p>
