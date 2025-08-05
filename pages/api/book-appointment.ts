@@ -12,8 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER || 'jaishree3025@gmail.com',
-        pass: process.env.EMAIL_PASS || 'nzutzxcmnbkhfmrh',
+        user: 'jaishree3025@gmail.com',         // ✅ Your Gmail
+        pass: 'nzutzxcmnbkhfmrh',               // ✅ App Password
       },
       tls: {
         rejectUnauthorized: false
@@ -21,8 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     })
 
     await transporter.sendMail({
-      from: process.env.EMAIL_FROM || 'drmovementrx@gmail.com',
-      to: process.env.EMAIL_TO || 'drmovementrx@gmail.com',
+      from: 'drmovementrx@gmail.com',
+      to: 'drmovementrx@gmail.com',
       subject: 'New Appointment Booking',
       text: `
 📅 New Appointment Request
